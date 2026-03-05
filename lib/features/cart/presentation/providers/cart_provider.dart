@@ -18,6 +18,12 @@ class CartProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // Method baru untuk menghapus item berdasarkan ID
+  void removeItem(String productId) {
+    _repository.removeItem(productId);
+    notifyListeners();
+  }
+
   void removeAll() {
     _repository.removeAllItems();
     notifyListeners();

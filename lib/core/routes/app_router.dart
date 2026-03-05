@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../features/cart/presentation/pages/catalog_pages.dart';
 import '../../features/cart/presentation/pages/cart_page.dart';
-import 'package:pertemuan_3_1123150013/features/cart/presentation/pages/cart_page.dart';
 
 class AppRouter {
   static const String catalog = "/";

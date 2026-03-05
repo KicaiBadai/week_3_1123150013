@@ -5,6 +5,7 @@ import '../entities/product.dart';
 abstract class CartRepository {
   List<Product> getCartItems();
   void addItem(Product product);
+  void removeItem(String productId); // Method baru untuk hapus item spesifik
   void removeAllItems();
   bool isItemInCart(String productId);
 }

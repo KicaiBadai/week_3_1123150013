@@ -1,6 +1,6 @@
-
 import 'package:pertemuan_3_1123150013/features/cart/domain/repositories/cart_repository.dart';
 import 'package:pertemuan_3_1123150013/features/cart/domain/entities/product.dart';
+
 // Implementasi konkret dari CartRepository
 // Di sini bisa diganti dengan API call, database, dll
 class CartRepositoryImpl implements CartRepository {
@@ -11,6 +11,10 @@ class CartRepositoryImpl implements CartRepository {
 
   @override
   void addItem(Product product) => _items.add(product);
+
+  @override
+  void removeItem(String productId) =>
+      _items.removeWhere((p) => p.id == productId);
 
   @override
   void removeAllItems() => _items.clear();
