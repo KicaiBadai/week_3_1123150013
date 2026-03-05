@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../core/routes/app_router.dart';
-import '../models/product.dart';
-import '../providers/cart_provider.dart';
+import 'package:pertemuan_3_1123150013/features/cart/domain/entities/product.dart';
+import 'package:pertemuan_3_1123150013/core/routes/app_router.dart';
+import 'package:pertemuan_3_1123150013/features/cart/presentation/widgets/add_button_widget.dart';
 
 class CatalogPage extends StatelessWidget {
   const CatalogPage({super.key});

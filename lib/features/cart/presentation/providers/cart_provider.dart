@@ -1,3 +1,8 @@
+import 'package:flutter/material.dart';
+
+import '../../domain/repositories/cart_repository.dart';
+import '../../domain/entities/product.dart';
+
 // Provider/Notifier: jembatan antara domain dan UI
 // Menggunakan CartRepository, bukan langsung manipulasi data
 class CartProvider extends ChangeNotifier {

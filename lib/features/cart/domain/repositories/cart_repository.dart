@@ -1,7 +1,10 @@
-import '../entities/product_cart.dart';
+import '../entities/product.dart';
 
+// Abstract class: kontrak yang harus diikuti oleh implementasi
+// Prinsip Dependency Inversion (DIP) dari SOLID
 abstract class CartRepository {
-  List<Product> getItems();
-  void add(Product product);
-  void removeAll();
+  List<Product> getCartItems();
+  void addItem(Product product);
+  void removeAllItems();
+  bool isItemInCart(String productId);
 }

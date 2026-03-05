@@ -1,19 +1,20 @@
-import '../../domain/entities/product_cart.dart';
-import '../../domain/repositories/cart_repository.dart';
 
+import 'package:pertemuan_3_1123150013/features/cart/domain/repositories/cart_repository.dart';
+import 'package:pertemuan_3_1123150013/features/cart/domain/entities/product.dart';
+// Implementasi konkret dari CartRepository
+// Di sini bisa diganti dengan API call, database, dll
 class CartRepositoryImpl implements CartRepository {
   final List<Product> _items = [];
 
   @override
-  List<Product> getItems() => _items;
+  List<Product> getCartItems() => List.unmodifiable(_items);
 
   @override
-  void add(Product product) {
-    _items.add(product);
-  }
+  void addItem(Product product) => _items.add(product);
 
   @override
-  void removeAll() {
-    _items.clear();
-  }
+  void removeAllItems() => _items.clear();
+
+  @override
+  bool isItemInCart(String productId) => _items.any((p) => p.id == productId);
 }
