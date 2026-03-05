@@ -23,7 +23,7 @@ flutter:
   
   assets:
     - assets/icon/app_icon.png
-
+  
 # KONFIGURASI FLUTTER LAUNCHER ICONS - di sini, di luar flutter:
 flutter_launcher_icons:
   android: true
